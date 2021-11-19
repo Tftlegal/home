@@ -13,5 +13,5 @@ Here are some ideas to get you started:
 
 - 📫 How to contact me: support@sytes.ru
 
-- ⚡ Fun fact: The above mail does not exist in the case, try other options.
+- ⚡ Fun fact:  The specified email does not really exist, try other options.
 -->
