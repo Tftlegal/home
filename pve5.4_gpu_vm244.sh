@@ -24,7 +24,12 @@ echo "vfio_virqfd" >> /etc/modules
 echo "options kvm ignore_msrs=1" >> /etc/modprobe.d/kvm.conf
 
 # Binding vfio-pci via device ID
-echo "options vfio-pci ids=10de:1b81,10de:10f0 disable_vga=1" >> /etc/modprobe.d/vfio.conf
+#echo "options vfio-pci ids=10de:1b81,10de:10f0 disable_vga=1" >> /etc/modprobe.d/vfio.conf
+#For GT210
+#echo "options vfio-pci ids=10de:0a65,10de:0be3 disable_vga = 1" >> /etc/modprobe.d/vfio.conf
+
+#For GTX1050TI
+#echo "options vfio-pci ids=10de:0a65,10de:0be3 disable_vga = 1" >> /etc/modprobe.d/vfio.conf
 
 # Enable Nested Hardware-assisted Virtualization
 
@@ -65,8 +70,8 @@ efidisk0: local-lvm:vm-244-disk-1,size=4M
 hostpci0: 0a:00,pcie=1
 machine: q35,kernel_irqchip=on
 memory: 8192
-name: test
-net0: virtio=9E:93:73:1B:38:0D,bridge=vmbr0,firewall=1,queues=8
+name: WinServ2019ASPV10
+net0: virtio=9E:D9:85:8E:5F:F7,bridge=vmbr0,firewall=1,queues=8
 numa: 0
 onboot: 0
 ostype: win10
