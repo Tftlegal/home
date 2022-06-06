@@ -4,6 +4,7 @@
 # https://wiki.archlinux.org/index.php/PCI_passthrough_via_OVMF
 # https://pve.proxmox.com/wiki/Pci_passthrough
 # https://pve.proxmox.com/wiki/Nested_Virtualization
+# https://gist.github.com/MakiseKurisu/21b08e5f6537a5b0a08a34c2382dd244
 
 # Remember to turn on SVM in BIOS and disable CSM
 
