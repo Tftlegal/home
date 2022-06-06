@@ -36,7 +36,7 @@ echo "options kvm ignore_msrs=1" >> /etc/modprobe.d/kvm.conf
 #For AMD
 #echo "options kvm-amd nested=1" > /etc/modprobe.d/kvm-amd.conf
 
-#FOR INTEL
+#For INTEL
 echo "options kvm-intel nested=Y" > /etc/modprobe.d/kvm-intel.conf
 
 
@@ -50,7 +50,12 @@ echo "options kvm-intel nested=Y" > /etc/modprobe.d/kvm-intel.conf
 # Y !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 # Enabling IOMMU
-sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="amd_iommu=on iommu=pt video=efifb:off"/' /etc/default/grub
+#For AMD
+#sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="amd_iommu=on iommu=pt video=efifb:off"/' /etc/default/grub
+
+#For INTEL
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt video=efifb:off"/' /etc/default/grub
+
 update-grub
 
 # Blacklist the driver
